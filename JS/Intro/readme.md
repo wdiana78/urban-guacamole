@@ -48,8 +48,6 @@ let 5score = 100   // cannot start with a number
 let let = "hello"  // let is a keyword
 
 
----
-
 ## 4. Variable Naming Styles
 
 ### Pascal Case
@@ -75,7 +73,6 @@ All letters are lowercase and words are separated using underscores.
     total_amount_due = 5000
 
 Mostly used in Python.
-
 
 
 
