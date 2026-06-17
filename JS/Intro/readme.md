@@ -38,7 +38,7 @@ Variables are declared using  let , const. Var  is an older way of declaring var
     
     let myAge = 23
     let _count = 0   
-    let totalscore 5
+    let totalScore5 = 100
     
     
 **Invalid names:**
