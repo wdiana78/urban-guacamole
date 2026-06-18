@@ -21,7 +21,7 @@ console.log("unValue", unValue, "Its type is", typeof unValue )
 
 
 
-const bonus="200"
+const bonus="200" //introduces a bug since 200 here is a string
 console.log("Bonus is", bonus)
 const salary=50000
 console.log("Salary is", salary)
