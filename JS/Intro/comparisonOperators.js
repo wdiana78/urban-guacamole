@@ -205,6 +205,45 @@ false   false   false
 */
 
 
+/*or operater 
+if at least one stayement has to be true for the whole statement to be true
+
+
+let mercy_age = 15
+let mercy_balance = 50000
+
+let is_greater_than_18 = mercy_age > 18       // false
+let has_more_than_20k = mercy_balance > 20000  // true
+
+console.log(`Is mercy age greater than 18: ${is_greater_than_18}`)
+console.log(`Mercy has more than 20k: ${has_more_than_20k}`)
+
+console.log(`Mercy's age is greater than 18
+    or she has more than 20k in her account
+    ${is_greater_than_18||has_more_than_20k}
+    `)
+
+/*
+OR -> ||
+At least one statement has to be true for the whole statement to be true
+
+TRUTH TABLE for ||
+val1    val2    result
+true    true    true
+true    false   true
+false   true    true
+false   false   false
+*/
+
+/*
+NOT -> !
+Flips the value to the opposite
+true  becomes false
+false becomes true
+*/
+
+console.log(`This is not true = ${!true}`)
+console.log(`This is not false = ${!false}`)
 
 
 
