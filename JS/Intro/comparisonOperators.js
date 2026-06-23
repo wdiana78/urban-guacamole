@@ -246,6 +246,16 @@ console.log(`This is not true = ${!true}`)
 console.log(`This is not false = ${!false}`)
 
 
+// brackets prioritise whatever is inside them, running it first before anything else
+
+// without brackets - JS decides the order, can be unpredictable
+let result1 = true || false && false   // false && false runs first -> true || false -> true
+
+// with brackets - you decide the order
+let result2 = (true || false) && false  // true || false runs first -> true && false -> false
+
+//truthy or false
+
 
 
 
