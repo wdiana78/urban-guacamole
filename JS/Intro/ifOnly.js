@@ -15,6 +15,7 @@
 let age=prompt("Enter your age")
 alert(`You entered ${age}`)
 
+
 // age=27
 // 27>10:true
 if (age>10){
