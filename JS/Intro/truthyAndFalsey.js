@@ -42,6 +42,8 @@ NB:
 */
 
 
+//--> Short Circuit Operators - Syntatical
+
 let y=true||false||true||false
 //y=true
 
