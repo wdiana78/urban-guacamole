@@ -21,7 +21,7 @@ the code will not be excecuted
 senario 1:
   1. declare a variable of your choice, assign a truthy value
      create an if statement and put the variable
-     inside the if statement condition(<variable>). inside the if
+     inside the if statement condition. inside the if
      console.log("Senario 1 it run")
 
 senario 2:
@@ -59,7 +59,7 @@ senario 6:
 senario 1:
   1. declare a variable of your choice, assign a truthy value
      create an if statement and put the variable
-     inside the if statement condition(<variable>). inside the if
+     inside the if statement condition. inside the if
      console.log("Senario 1 it run")
 */
 
