@@ -1,37 +1,53 @@
 /*
-Types of functions
+Types of Functions
 
-- Named function
+- Named Function
 - Anonymous Function
-- Arrow function
-- Higher Order
+- Arrow Function
+- Higher Order Function
 - Recursive Function
-- Callback
+- Callback Function
+*/
 
-Named Function: A function with a name.
-Anonymous Function: A function without a name.
+/*
 
--> A function can be assigned to a variable.
--> A variable can be referenced by a variable.
+Named Function
+
+
+A named function has an identifier after the
+'function' keyword, allowing it to be called by name.
+*/
+
+function rectangleArea(l, w) {
+  return l * w;
+}
+
+/*
+
+Functions are Values
+
+
+In JavaScript, a function is a value.
+
+That means it can be:
+- stored inside a variable,
+- passed as an argument to another function, or
+- returned from another function.
 */
 
 function areaCircle(r) {
-  return 3.142 * r * r; // Area of a circle
-} // Named function
-
-let age = 23;
-
-let samsAge = age; // Copying a value
+  return 3.142 * r * r;
+}
 
 let ac = areaCircle;
 
 /*
-What is the value of ac and what is it?
--> Hint: use typeof
+What is the value of ac, and what is its type?
+Hint: use typeof
 */
 
 console.log(ac);
-// The function itself is printed because it is not being called.
+// The function itself is printed because it isn't being called.
 
 console.log(typeof ac);
 // "function"
@@ -40,24 +56,36 @@ console.log(ac(5));
 // 78.55
 
 /*
-These function calls produce the same result:
+These produce the same result:
 
 areaCircle(10);
 ac(10);
 
-Both variables reference the same function.
-*/
+Both references point to the same function.
 
-/*
-Understand the difference:
+Difference:
 
 let result = areaCircle(5); // Stores the returned value.
 let ref = areaCircle;       // Stores a reference to the function.
 */
 
-// =====================================================
+/*
+
+Anonymous Function
+
+
+An anonymous function has no name.
+
+Since it has no name, it is usually
+referenced through the variable
+it is assigned to.
+*/
+
+let rA = function (l, w) {
+  return l * w;
+};
+
 // EXERCISE
-// =====================================================
 
 /*
 1. Create a function of your choice. Use a named function.
@@ -67,9 +95,25 @@ let ref = areaCircle;       // Stores a reference to the function.
 5. Try calling the variable and the original function.
    Make an observation.
 6. Remove the function name since it's unnecessary.
-7. Anonymous function.
+7. Convert it into an arrow function.
 */
 
+/*
+
+Arrow Function
+
+
+Arrow functions are a shorter syntax
+(syntactic sugar) for writing function expressions.
+
+"Syntactic sugar" means the syntax is shorter
+and often easier to read, but it doesn't
+change what the code does.
+*/
+
+const rA2 = (l, w) => {
+  return l * w;
+};
 // STEP 1: Create a named function.
 
 function rectangleArea(l, w) {
@@ -189,3 +233,22 @@ This is an anonymous function.
 It is called using the variable 'area',
 not a function name.
 */
+
+//PERSONAL PRACTTICES
+// named function
+
+function greet(name) {
+  return `hello ${hello}`; //named function
+}
+
+//anonymous function doesnt have a name sso you store it inside a variable
+// the name greet is misisg below
+const greet = function (name) {
+  return `hello ${name}`;
+};
+
+//example
+const add = function (a, b) {
+  return a + b;
+};
+console.log(add(5, 3));
