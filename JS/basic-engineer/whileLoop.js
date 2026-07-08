@@ -196,36 +196,34 @@ function mathTable(num1, num2) {
     console.error("Ensure number1 or number2 are numbers greater than 0");
     return;
   }
-
-  let outerLoop = num1; //2
-
-  while (outerLoop > 0) {
-    doInnerLoop(outerLoop, num2); //
-    outerLoop = outerLoop - 1;
+  let currentFirstNumber = num1; //2
+  while (currentFirstNumber > 0) {
+    doInnerLoop(currentFirstNumber, num2); //
+    currentFirstNumber = currentFirstNumber - 1;
   }
 
   // }
 }
 
 //individual//test separate
-function doInnerLoop(outerLoop, num2) {
-  let innerLoop = num2;
-  while (innerLoop > 0) {
-    console.log(`outerLoop=${outerLoop} innerLoop=${innerLoop}`);
-    console.log(`${outerLoop}*${innerLoop}=${outerLoop * innerLoop}`);
-    innerLoop = innerLoop - 1;
+function doInnerLoop(currentFirstNumber, num2) {
+  let currentSecondNumber = num2;
+  while (currentSecondNumber > 0) {
+    console.log(`currentFirstNumber=${currentFirstNumber} currentSecondNumber=${currentSecondNumber}`);
+    console.log(`${currentFirstNumber}*${currentSecondNumber}=${currentFirstNumber * currentSecondNumber}`);
+    currentSecondNumber = currentSecondNumber - 1;
   }
 }
 
   //you can call the doInnerLoop function as above or you can keep the code directly as done below
-  // while (outerLoop > 0) {
-  //   let innerLoop = num2; //3 //3
-  //   while (innerLoop > 0) {
-  //     console.log(`outerLoop=${outerLoop} innerLoop=${innerLoop}`);
-  //     console.log(`${outerLoop}*${innerLoop}=${outerLoop * innerLoop}`);
-  //     innerLoop = innerLoop - 1;
+  // while (currentFirstNumber > 0) {
+  //   let currentSecondNumber = num2; //3 //3
+  //   while (currentSecondNumber > 0) {
+  //     console.log(`currentFirstNumber=${currentFirstNumber} currentSecondNumber=${currentSecondNumber}`);
+  //     console.log(`${currentFirstNumber}*${currentSecondNumber}=${currentFirstNumber * currentSecondNumber}`);
+  //     currentSecondNumber = currentSecondNumber - 1;
   //   }
-  //   outerLoop = outerLoop - 1;
+  //   currentFirstNumber = currentFirstNumber - 1;
 
 
 //METHOD 2
