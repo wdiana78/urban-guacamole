@@ -1,146 +1,266 @@
 /*
----> For loop -> mostly meant for numbers.
+Loops: run a block of code repeatedly.
 
----> A combination of using a while loop for numbers.
+Avoid infinite loops—they are bugs.
+A loop must always have an exit condition.
 
-Every loop has:
-1. Starting point
-2. Condition
-3. What happens after each iteration
+Syntax:
 
-A for loop combines all three into one statement.
-
-for (startingPoint; condition; afterEachIteration) {
-
+for (initialization; condition; update) {
+  // block of code
 }
+
+The loop continues while the condition is true.
+The loop exits when the condition becomes false.
 */
 
-// Use this while loop to make a for loop.
+// Counter from 0 to 2
 
-let k = 0; // Starting point
-
-// Condition: k < 20
-while (k < 20) {
-  console.log("k", k);
-  k = k + 1; // After each iteration
-}
-
-for (let k = 0; k < 20; k = k + 1) {
-  console.log("k", k);
+for (let n = 0; n <= 2; n++) {
+  console.log(`n is ${n}`);
 }
 
 /*
-Create a function @function1 (give it any name).
+How each iteration works:
 
-It does not take any parameters.
 
-This function should:
+Iteration 1
 
-1. Prompt the user for the first number.
-   Check that it is a valid number greater than 1.
+n = 0
+Is 0 <= 2? Yes.
+console.log(`n is ${n}`); // n is 0
+n becomes 1 (update runs after the block)
 
-2. Prompt the user for the second number.
-   Check that it is a valid number greater than 1.
 
-Use recursion or a for/while loop to ensure the user enters
-a correct value for both number1 and number2.
+Iteration 2
 
-After both numbers are entered, call @function2
-and pass the numbers as parameters.
+n = 1
+Is 1 <= 2? Yes.
+console.log(`n is ${n}`); // n is 1
+n becomes 2
 
-Example:
-function2(number1, number2)
 
-------------------------------------------------
+Iteration 3
 
-Create a function @function2 (give it any name).
+n = 2
+Is 2 <= 2? Yes.
+console.log(`n is ${n}`); // n is 2
+n becomes 3
 
-This function takes the following parameters:
 
-@param1 - a number greater than 1
-@param2 - a number greater than 1
+Iteration 4
 
-Check that both parameters are valid numbers greater than 1.
-
-Example:
-
-function2(3, 5)
-
-Create and display the multiplication table.
-
-Console output:
-
------
-3 * 5 =
-3 * 4 =
-3 * 3 =
-3 * 2 =
-3 * 1 =
------
-2 * 5 =
-2 * 4 =
-2 * 3 =
-2 * 2 =
-2 * 1 =
------
-1 * 5 =
-1 * 4 =
-1 * 3 =
-1 * 2 =
-1 * 1 =
+n = 3
+Is 3 <= 2? No.
+Loop exits. Iteration 4 never happens.
 */
 
-// Method 1
-
-function function1() {
-  let number1 = Number(prompt("Enter the first number:"));
-
-  for (; isNaN(number1) || number1 <= 1; ) {
-    number1 = Number(prompt("Invalid! Enter a number greater than 1:"));
-  }
-
-  let number2 = Number(prompt("Enter the second number:"));
-
-  for (; isNaN(number2) || number2 <= 1; ) {
-    number2 = Number(prompt("Invalid! Enter a number greater than 1:"));
-  }
-
-  function2(number1, number2);
+// Counter from 0 to 100
+for (let n = 0; n <= 100; n++) {
+  console.log("n is", n);
 }
 
-function function2(param1, param2) {
-  if (isNaN(param1) || param1 <= 1 || isNaN(param2) || param2 <= 1) {
-    console.log("Invalid numbers.");
-    return;
-  }
+/*
+create a function <any name>
+the function should take a parameter
+@param is number greater than 0;
+have a loop inside that counts down from this number
+use for loop. it shoud print n:
+*/
 
-  for (let i = param1; i >= 1; i--) {
-    for (let j = param2; j >= 1; j--) {
-      console.log(i + " * " + j + " = " + i * j);
+function age(x) {
+  for (; x > 0; x--) {
+    console.log(x);
+  }
+}
+
+age(20);
+
+/*
+create a function @function1<give it any name>.
+    it does not take any parameters
+    this function
+    1.prompts a user for the first number
+    check if number is a valid number greater than 1.
+    2.prompts a user for the second number
+    check if number is a valid number greater than 1.
+    use recursion or a for loop to ensure
+    user enters a correct number for number1 and number 2
+    after the number is entered call @function2<>
+    which takes the numbers as parameters.
+    example-> @function2(number1,number2)
+
+create a function @function2<give it any name>.
+    this function takes in the following parameter
+    @param1 number greater than 1.
+    @param2 number greater than 1.
+    check if @param1 is a number greater than 1.
+    check if @param2 is a number greater than 1.
+    example if @function2(3,5)
+    create a maths table for it. upto
+    ie console logs
+    -----
+    3*5=
+    3*4=
+    3*3
+    3*2=
+    3*1=
+-------
+    2*5=
+    2*4=
+    2*3=
+    2*2
+    2*1=
+-------
+    1*5=
+    1*4=
+    1*3=
+    1*2=
+    1*1
+
+*/
+//METHOD 1
+
+function promptStudent() {
+  let num1 = null;
+  let num2 = null;
+
+  for (;;) {
+    num1 = prompt("Enter the first number");
+    if (isNaN(num1)) {
+      continue; //restart the loop
+    }
+    num2 = prompt("Enter the second number");
+    if (isNaN(num2)) {
+      continue; //restart the loop from beginning
     }
 
-    console.log("-------");
+    num1 = parseInt(num1);
+    num2 = parseInt(num2);
+
+    if (num1 <= 0 || num2 <= 0) {
+      continue; //
+    }
+    break;
   }
+  console.log("Got valid number", num1, num2);
+  mathTable(num1, num2);
 }
-
-function1();
-
-// Method 2 - By Tedd
 
 function mathTable(num1, num2) {
   if (!num1 || num1 < 0 || !num2 || num2 < 0) {
-    console.error("Ensure number1 and number2 are numbers greater than 0.");
+    console.error("Ensure number1 or number2 are numbers greater than 0");
     return;
   }
 
-  let outerLoop = num1;
-
-  for (let i = num1; i >= 1; i--) {
-    for (let innerLoop = num2; innerLoop > 0; innerLoop--) {
-      console.log(`outerLoop=${outerLoop} innerLoop=${innerLoop}`);
-      console.log(`${outerLoop} * ${innerLoop} = ${outerLoop * innerLoop}`);
-    }
-
-    outerLoop = outerLoop - 1;
+  for (
+    let currentFirstNumber = num1;
+    currentFirstNumber > 0;
+    currentFirstNumber--
+  ) {
+    printProducts(currentFirstNumber, num2);
   }
 }
+
+//individual//test separate
+function printProducts(currentFirstNumber, num2) {
+  for (
+    let currentSecondNumber = num2;
+    currentSecondNumber > 0;
+    currentSecondNumber--
+  ) {
+    console.log(
+      `currentFirstNumber=${currentFirstNumber} currentSecondNumber=${currentSecondNumber}`,
+    );
+    console.log(
+      `${currentFirstNumber}*${currentSecondNumber}=${currentFirstNumber * currentSecondNumber}`,
+    );
+  }
+}
+
+//you can call the printProducts function as above or you can keep the code directly as done below
+// for (let currentFirstNumber = num1; currentFirstNumber > 0; currentFirstNumber--) {
+//   for (let currentSecondNumber = num2; currentSecondNumber > 0; currentSecondNumber--) {
+//     console.log(`currentFirstNumber=${currentFirstNumber} currentSecondNumber=${currentSecondNumber}`);
+//     console.log(`${currentFirstNumber}*${currentSecondNumber}=${currentFirstNumber * currentSecondNumber}`);
+//   }
+// }
+
+//METHOD 2
+
+// Function 1
+function getNumbers() {
+  let number1;
+  let number2;
+
+  // Prompt for first number
+  for (;;) {
+    number1 = Number(prompt("Enter the first number greater than 1:"));
+
+    if (!isNaN(number1) && number1 > 1) {
+      break;
+    }
+
+    console.log("First number must be greater than 1.");
+  }
+
+  // Prompt for second number
+  for (;;) {
+    number2 = Number(prompt("Enter the second number greater than 1:"));
+
+    if (!isNaN(number2) && number2 > 1) {
+      break;
+    }
+
+    console.log("Second number must be greater than 1.");
+  }
+
+  // Call Function 2
+  multiplicationTable(number1, number2);
+}
+
+// Function 2
+function multiplicationTable(number1, number2) {
+  // Validate parameters
+  if (isNaN(number1) || number1 <= 1) {
+    console.log("First number must be greater than 1.");
+    return;
+  }
+
+  if (isNaN(number2) || number2 <= 1) {
+    console.log("Second number must be greater than 1.");
+    return;
+  }
+
+  // Create multiplication table
+  for (let i = number1; i >= 1; i--) {
+    for (let j = number2; j >= 1; j--) {
+      console.log(`${i} * ${j} = ${i * j}`);
+    }
+
+    console.log("----------------");
+  }
+}
+
+// Start the program
+getNumbers();
+// METHOD 3 - TEDD'S VERSION
+//
+
+function MathTable() {
+  number1 = Number(prompt("Enter first Number:"));
+
+  number2 = Number(prompt("Enter Second Number:"));
+
+  if (number1 > 1 && number2 > 1) {
+    for (let i = 1; i <= number1; i++) {
+      for (let j = 1; j <= number2; j++) {
+        console.log(`${i}x${j}=${i * j}`);
+      }
+    }
+  } else {
+    alert("Both Numbers must be greater than 1");
+  }
+}
+
+MathTable();

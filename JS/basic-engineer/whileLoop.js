@@ -198,7 +198,7 @@ function mathTable(num1, num2) {
   }
   let currentFirstNumber = num1; //2
   while (currentFirstNumber > 0) {
-    doInnerLoop(currentFirstNumber, num2); //
+    printProducts(currentFirstNumber, num2); //
     currentFirstNumber = currentFirstNumber - 1;
   }
 
@@ -206,25 +206,28 @@ function mathTable(num1, num2) {
 }
 
 //individual//test separate
-function doInnerLoop(currentFirstNumber, num2) {
+function printProducts(currentFirstNumber, num2) {
   let currentSecondNumber = num2;
   while (currentSecondNumber > 0) {
-    console.log(`currentFirstNumber=${currentFirstNumber} currentSecondNumber=${currentSecondNumber}`);
-    console.log(`${currentFirstNumber}*${currentSecondNumber}=${currentFirstNumber * currentSecondNumber}`);
+    console.log(
+      `currentFirstNumber=${currentFirstNumber} currentSecondNumber=${currentSecondNumber}`,
+    );
+    console.log(
+      `${currentFirstNumber}*${currentSecondNumber}=${currentFirstNumber * currentSecondNumber}`,
+    );
     currentSecondNumber = currentSecondNumber - 1;
   }
 }
 
-  //you can call the doInnerLoop function as above or you can keep the code directly as done below
-  // while (currentFirstNumber > 0) {
-  //   let currentSecondNumber = num2; //3 //3
-  //   while (currentSecondNumber > 0) {
-  //     console.log(`currentFirstNumber=${currentFirstNumber} currentSecondNumber=${currentSecondNumber}`);
-  //     console.log(`${currentFirstNumber}*${currentSecondNumber}=${currentFirstNumber * currentSecondNumber}`);
-  //     currentSecondNumber = currentSecondNumber - 1;
-  //   }
-  //   currentFirstNumber = currentFirstNumber - 1;
-
+//you can call the printProducts function as above or you can keep the code directly as done below
+// while (currentFirstNumber > 0) {
+//   let currentSecondNumber = num2; //3 //3
+//   while (currentSecondNumber > 0) {
+//     console.log(`currentFirstNumber=${currentFirstNumber} currentSecondNumber=${currentSecondNumber}`);
+//     console.log(`${currentFirstNumber}*${currentSecondNumber}=${currentFirstNumber * currentSecondNumber}`);
+//     currentSecondNumber = currentSecondNumber - 1;
+//   }
+//   currentFirstNumber = currentFirstNumber - 1;
 
 //METHOD 2
 
