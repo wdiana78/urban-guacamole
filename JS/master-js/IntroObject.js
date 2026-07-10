@@ -143,3 +143,33 @@ Fun Fact: ${car.fun_fact}`,
 
   is_it_a_classic: false,
 };
+
+//exmaple 2
+const car = {
+  name: "Peugeot 504",
+  model: "504 L saloon",
+  color: "Jungle Green",
+  top_speed: "160km/h",
+  504: "Lion of Africa",
+  engine_information: {
+    name: " 1.8L inline-4 (XC5) ",
+    cylinder: 4,
+  },
+  manufacture: {
+    name: "Peugeot",
+    aka: "Pegot",
+    country: "France",
+  },
+  alert_info: function () {
+    alert(`Car:${car.name}
+            model:${car.model}
+            color:${car.color}
+            top_speed:${car.top_speed}
+            `);
+  },
+  fun_fact: `
+    First car to cross the sahara desert.
+    no reverse parking near banks.
+    No air bags you die like real men.
+    `,
+};
