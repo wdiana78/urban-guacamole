@@ -294,3 +294,6 @@ function PrintObjectValues(obj) {
 }
 
 PrintObjectValues(car2);
+
+//update object data//
+//before you can update you need to be able to access the data

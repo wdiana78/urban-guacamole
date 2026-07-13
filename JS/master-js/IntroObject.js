@@ -173,3 +173,47 @@ const car = {
     No air bags you die like real men.
     `,
 };
+
+//objects practice
+const person1 = {
+  firstname: "Spongebob",
+  lastname: "Squarepants",
+  age: 30,
+  isEmployeed: true,
+  sayHello: function () {
+    console.log("Hi! Iam Spongebob!");
+  },
+  eat: function () {
+    console.log("Iam eating crabby Patty");
+  },
+};
+
+const person2 = {
+  firstname: "Patrick",
+  lastname: "Star",
+  age: 42,
+  isEmployed: false,
+  sayHello: function () {
+    console.log("Hey! Iam Patrick");
+  },
+  eat: () => {
+    console.log("Iam eating crabby Pizza");
+  },
+};
+person1.sayHello();
+person2.sayHello();
+
+person1.eat();
+person2.eat();
+
+//access person 1
+console.log(person1.firstname);
+console.log(person1.lastname);
+console.log(person1.age);
+console.log(person1.isEmployed);
+
+//access person 2
+console.log(person2.firstname);
+console.log(person2.lastname);
+console.log(person2.age);
+console.log(person2.isEmployed);
