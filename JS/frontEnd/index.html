@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Practice</title>
+  </head>
+
+  <body>
+    <!-- Mouse Coordinates -->
+    <div>
+      <span> X direction <b id="x-b"></b> </span>
+
+      <span> Y direction <b id="y-b"></b> </span>
+    </div>
+
+    <br />
+
+    <!-- DOM Access Practice -->
+    <div id="div1">
+      <h3>My Favorite Movies</h3>
+
+      <ul>
+        <li class="list-item">Inception</li>
+        <li class="list-item">The Dark Knight</li>
+        <li class="list-item">Interstellar</li>
+        <li class="list-item">The Matrix</li>
+        <li class="list-item">The Lord of the Rings: The Return of the King</li>
+      </ul>
+    </div>
+
+    <br />
+
+    <!-- DOM Update Buttons -->
+    <button onclick="original()">Original Content</button>
+    <button onclick="replace()">Update Content</button>
+    <button onclick="updateFruits()">Update innerText</button>
+
+    <br />
+    <br />
+
+    <!-- Event Listener Button -->
+    <button id="btn-event-checker">Event Checker</button>
+
+    <br />
+    <br />
+
+    <!-- Form 1 -->
+    <form id="form1">
+      <p>
+        <label>Name</label>
+        <input id="form1input1" />
+      </p>
+
+      <p>
+        <label>Email</label>
+        <input id="form1input2" />
+      </p>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <br />
+
+    <!-- Form 2 -->
+    <form id="form2">
+      <p>
+        <label>Name</label>
+        <input id="form2input1" />
+      </p>
+
+      <p>
+        <label>Email</label>
+        <input id="form2input2" />
+      </p>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- JavaScript Files -->
+    <script src="./domAccess.js"></script>
+    <script src="./domEvent.js"></script>
+    <script src="./forms.js"></script>
+  </body>
+</html>
