@@ -30,7 +30,7 @@ function Parent() {
   );
 }
 //displying props using prop keyword
-function Child(props) {
+function Child1(props) {
   console.log(props);
 
   return (
