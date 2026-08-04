@@ -1,10 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import AmazonPage2 from "./AmazonPage2.0";
+import StateAndEvents from "./StateAndEvents/ClickMe"; //renamed Clickme compone to StatesAndEvents
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <AmazonPage2 />
+    <StateAndEvents /> {/*named whatever ClickMe exports as StatesAndEvents*/}
   </StrictMode>,
 );
 
