@@ -2,22 +2,31 @@
 How to handle form input and events
 */
 
+import { useState } from "react";
+
 function Form() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   // event when name changes
   const nameOnChange = (e) => {
-    console.log("Name is", e.target.value);
+    setName(e.target.value);
   };
 
   const emailOnChange = (e) => {
-    console.log("Email is", e.target.value);
+    setEmail(e.target.value);
   };
 
   const passwordOnChange = (e) => {
-    console.log("Password is", e.target.value);
+    setPassword(e.target.value);
   };
 
   const onSubmit = () => {
     console.log("Form submitted");
+    console.log("Name is", name);
+    console.log("Email is", email);
+    console.log("Password is", password);
   };
 
   return (
@@ -27,9 +36,10 @@ function Form() {
           <label>Name</label>
         </div>
         <div>
-          <input onChange={nameOnChange} />
+          <input name="John" onChange={nameOnChange} />
         </div>
       </main>
+
       <main>
         <div>
           <label>Email</label>
@@ -38,6 +48,7 @@ function Form() {
           <input onChange={emailOnChange} />
         </div>
       </main>
+
       <main>
         <div>
           <label>Password</label>
@@ -46,11 +57,16 @@ function Form() {
           <input type="password" onChange={passwordOnChange} />
         </div>
       </main>
+
       <main>
-        <main>
-          <button onClick={onSubmit}>Submit</button>
-        </main>
+        <button onClick={onSubmit}>Submit</button>
       </main>
+
+      <ul>
+        <li>Name: {name}</li>
+        <li>Email: {email}</li>
+        <li>Password: {password}</li>
+      </ul>
     </div>
   );
 }
