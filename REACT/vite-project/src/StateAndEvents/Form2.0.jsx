@@ -43,9 +43,8 @@ function Form() {
   const nameOnChange = (e) => {
     // console.log("NAME IS", e.target.value);
 
-    const inputClone = { ...input };
-    //const inputClone = { ...input }
-
+    const inputClone = { ...input }; //to counter immutability -passing by refrence
+    //you can also do the structured clone
     inputClone.name = e.target.value;
     setInput(inputClone);
   };
