@@ -1,11 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import SideEffectsConditions from "./SideEffectsConditions/StopWatch"; //renamed Clickme compone to StatesAndEvents
+import GithubProject from "./GithubProject"; //renamed Clickme compone to StatesAndEvents
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <SideEffectsConditions />{" "}
-    {/*named whatever ClickMe exports as StatesAndEvents*/}
+    <GithubProject /> {/*named whatever ClickMe exports as StatesAndEvents*/}
   </StrictMode>,
 );
 
