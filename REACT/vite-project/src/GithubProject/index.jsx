@@ -1,6 +1,5 @@
 /*
-{
-    // This is ONE user returned by GitHub
+// This is ONE user returned by GitHub
 
 const person = {
   login: "mojombo",
@@ -9,7 +8,7 @@ const person = {
   html_url: "https://github.com/mojombo",
   type: "User",
 };
-}*/
+*/
 
 
 
