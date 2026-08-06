@@ -1,10 +1,14 @@
 /*
 {
-    login: "mojombo",
-    id: 1,
-    avatar_url: "...",
-    html_url: "...",
-    type: "User"
+    // This is ONE user returned by GitHub
+
+const person = {
+  login: "mojombo",
+  id: 1,
+  avatar_url: "https://avatars.githubusercontent.com/u/1?v=4",
+  html_url: "https://github.com/mojombo",
+  type: "User",
+};
 }*/
 
 
