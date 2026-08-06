@@ -1,3 +1,14 @@
+/*
+{
+    login: "mojombo",
+    id: 1,
+    avatar_url: "...",
+    html_url: "...",
+    type: "User"
+}*/
+
+
+
 import { useState, useEffect } from "react";
 import axios from "axios";
 
