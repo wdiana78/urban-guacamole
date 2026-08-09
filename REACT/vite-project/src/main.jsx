@@ -1,10 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import GithubProject from "./GithubProject"; //renamed Clickme compone to StatesAndEvents
+import GithubProject from "./GithubProject";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <GithubProject /> {/*named whatever ClickMe exports as StatesAndEvents*/}
+    <GithubProject />
   </StrictMode>,
 );
 
