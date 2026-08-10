@@ -28,7 +28,7 @@ function LifeCycle() {
   useEffect(() => {
     console.log("N has changed");
   }, [n]); //[n] is the dependency array
-
+  //be carefull not to create a loop using setN(n)
   return (
     <div>
       <div>
