@@ -39,4 +39,4 @@ area_rectangle(width=10,length=55)
 # You have to match the parameter names with arguments
 area_rectangle(width=10,length=55)
 
-# area_rectangle(40)
+# area_rectangle(40) produces error as function expects two parameters 
