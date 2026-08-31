@@ -12,5 +12,5 @@ args_kwargs(45,39,a=2,b=30)
 
 
 #nb
-*args   → (45, 39)              # tuple
-**kwargs → {"a": 2, "b": 30}   # dictionary
+*args   → (45, 39) # tuple
+**kwargs → {"a": 2, "b": 30} # dictionary
