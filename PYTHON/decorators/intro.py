@@ -39,3 +39,24 @@ def french_hello():
 # → hello() → hello
 
 french_hello()
+
+
+
+#example 2
+
+
+def decorate(greet):
+    def wrapper():
+        print("Before")
+        greet()
+        print("After")
+
+    return wrapper
+
+
+@decorate
+def welcome():
+    print("Good morning")
+
+
+welcome()
