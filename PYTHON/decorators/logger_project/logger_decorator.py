@@ -26,7 +26,7 @@ def logger(func):
         with open(f"{today}.txt", "a") as f:
             f.write(
                 f"ts:{timestamp}--func:{func.__name__}--"
-                f"time:{diff_in_ms}ms--result:{result}\n"  # FIXED
+                f"time:{diff_in_ms}ms--result:{result}\n"  
             )
 
         return result
