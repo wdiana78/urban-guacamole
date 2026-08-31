@@ -29,7 +29,7 @@ def sum(a,b):
 
 
 def sum2(*args):
-    #tupmple
+    #tuple
     ans=0
     for n in args:
         print(f"n is {n}")
