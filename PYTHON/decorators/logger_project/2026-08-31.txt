@@ -1,0 +1,2 @@
+ts:2026-08-31T15:18:45.148239--func:hello--time:0.16.ms
+ts:2026-08-31T15:18:45.154789--func:big_count--time:4.16.ms
