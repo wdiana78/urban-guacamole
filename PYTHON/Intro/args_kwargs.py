@@ -9,3 +9,8 @@ def args_kwargs(*args,**kwargs):
 #args_kwargs(a=2,b=30,45,39)
 
 args_kwargs(45,39,a=2,b=30)
+
+
+#nb
+*args   → (45, 39)              # tuple
+**kwargs → {"a": 2, "b": 30}   # dictionary
