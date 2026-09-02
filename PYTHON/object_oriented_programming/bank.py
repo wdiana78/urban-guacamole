@@ -51,9 +51,10 @@ class House:
 
 
     # CONSTRUCTOR
-    # __init__ runs automatically when an object is created
+    # __init__ is the constructor
+    # constructor runs automatically when an object is created
     # self = the particular object being created
-    # owner and location = information given when creating the object
+    # owner and location = information given to the constructor
     def __init__(self, owner, location):
         print("Class house created - initializer called")
         self.owner = owner
@@ -72,15 +73,12 @@ class House:
     # METHOD 2: print_self
     # self = the particular object using this method
     def print_self(self):
-        # self = the object itself
         print(self)
-
-        # __dict__ = dictionary containing the object's own properties
-        print(self.__dict__)
+        print(self.__dict__)  # dictionary containing the object's own properties
 
 
-# When accessing object properties use dot notation
-# Bracket notation is for dictionaries
+# When access object properties use dot notation
+# Bracket notation is for dictionary
 
 
 # ---------------- MACRINE'S HOUSE ----------------
@@ -88,12 +86,13 @@ class House:
 # Instantiate class → create an object from a class
 macrine_house = House(owner="Macrine", location="Kikuyu")
 
-# The constructor automatically runs here:
+# The constructor runs automatically when the object is created
 # macrine_house.__init__()
-#
-# The constructor sets:
 # macrine_house.owner = "Macrine"
 # macrine_house.location = "Kikuyu"
+
+# We can also change the properties using the config method
+# macrine_house.config(owner="Macrine", location="Kikuyu")
 
 print(f"Macrines House Owner {macrine_house.owner}")
 print(f"Macrines Location {macrine_house.location}")
@@ -111,17 +110,21 @@ print("End of print macrines")
 
 # ---------------- DANIEL'S HOUSE ----------------
 
-# Create another object using the constructor
+# Instantiate class → create another object from the class
 daniel_house = House(owner="Daniel", location="Muranga")
 
-# The constructor automatically sets:
+# The constructor runs automatically when the object is created
+# daniel_house.__init__()
 # daniel_house.owner = "Daniel"
 # daniel_house.location = "Muranga"
+
+# We can also change the properties using the config method
+# daniel_house.config(owner="Daniel", location="Muranga")
 
 print(f"Daniels House Owner {daniel_house.owner}")
 print(f"Daniels Location {daniel_house.location}")
 print(f"Daniels House Bedrooms {daniel_house.bedrooms}")
-print(f"Daniels House Bathrooms {daniel_house.bathrooms}")
+print(f"Daniels House Bathroom {daniel_house.bathrooms}")
 print(f"Daniels House Floors {daniel_house.floors}")
 print(f"Daniels House Area {daniel_house.area}")
 print(f"Daniels House Designer {daniel_house.architect}")
