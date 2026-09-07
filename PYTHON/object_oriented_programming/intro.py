@@ -13,7 +13,7 @@ work easy by using principles.
 
 2. Abstraction
    - Hiding unnecessary complexity or implementation details.
-
+    -Getters and setters .class methods. class properties . static method properties
 3. Inheritance
    - one class to reuse or extend properties
      and methods of another class.
