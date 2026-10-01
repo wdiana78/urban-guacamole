@@ -29,7 +29,7 @@ clients=[
 
 @app.route("/")
 def home():
-    #link ai model <>
+   
     return render_template("home.html")
 
 #without using jinja 
