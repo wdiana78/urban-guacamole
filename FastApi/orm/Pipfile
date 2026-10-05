@@ -4,11 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-fastapi = {extras = ["standard"], version = "*"}
+uvicorn = "*"
 psycopg2-binary = "*"
 python-dotenv = "*"
+fastapi = {extras = ["standard"], version = "*"}
 
 [dev-packages]
 
 [requires]
 python_version = "3.12"
+python_full_version = "3.12.14"

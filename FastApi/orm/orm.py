@@ -16,7 +16,7 @@ class Inventory:
                 CREATE TABLE IF NOT EXISTS inventory (
                     id SERIAL PRIMARY KEY,
                     name VARCHAR(250) NOT NULL,
-                    qty integer NOT NULL,
+                    qty INT NOT NULL,
                     buying_price integer NOT NULL,
                     selling_price integer NOT NULL,
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
