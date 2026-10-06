@@ -46,3 +46,12 @@ url = env("DATABASE_URL")
 
 - pipenv run prisma db pull
 - pipenv run prisma generate
+
+--Connect to our db
+
+-- Routes we begin. user member routes.
+-> signup <create an account>
+-> login <authentication>
+
+-- for data validation(optional) use pydantic
+pipenv install pydantic 'pydantic[email]'
